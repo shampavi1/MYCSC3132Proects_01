@@ -60,7 +60,7 @@ catch(Exception $e){
 
 
 
-PrintTables ("users",$connect,["uname","uemail"]);
+PrintTables ("users",$connect,["user_name","user_email"]);
 
  
 
