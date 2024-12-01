@@ -45,7 +45,6 @@ catch(Exception $e){
 }
 }
  printTable("books",$connect);
- printTable("requests",$connect);
  printTable("users",$connect);
 
-?>
+?> 
