@@ -8,12 +8,12 @@
 <body>
     <h1>My Works 29.11.2024</h1><br><br>
 
-    <p>"you can insert a data enty here "</p><br>;
-    <p>"It will carry to form "</p><br>;
+    <p>"you can insert a data enty here"</p>
+    <p>"It will carry to form "</p>
     <a href="insert.php">Insert</p><br>
-    <p>"Here you can fill the form"</p><br>;
+    <p>"Here you can fill the form"</p>
     <a href="form.php">form</a><br>
-    <p>"Here defined data enry added"</p><br>;
+    <p>"Here defined data enry added"</p>
     <a href="table.php">Table</a><br>
 
     
