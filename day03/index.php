@@ -10,7 +10,7 @@
 
     <p>You can insert a data enty here</p>
     <p>It will carry to form</p>
-    <a href="insert.php">Insert</p><br>
+    <a href="insert.php">Insert</a><br>
     <p>Here you can fill the form</p>
     <a href="form.php">form</a><br>
     <p>Here defined data enry added</p>
