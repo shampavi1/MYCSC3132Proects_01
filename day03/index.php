@@ -10,7 +10,7 @@
 
     <a href="form.php">form</a><br>
     <a href="insert.php">Insert</a><br>
-    <a href="table.php">Table </a><br>
+    <a href="table.php">Table</a><br>
 
     
 </body>
