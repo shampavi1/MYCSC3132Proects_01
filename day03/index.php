@@ -8,14 +8,12 @@
 <body>
     <h1>My Works 29.11.2024</h1><br><br>
 
-    echo "you can insert a data enty here";
-    echo "<br>";
-    echo "It will carry to form";
-    echo "<br>";
+    echo " you can insert a data enty here <br> ";
+    echo "It will carry to form <br> ";
     <a href="insert.php">Insert</a><br>
-    evho "here you can fill the form <br>";
+    echo " Here you can fill the form <br>";
     <a href="form.php">form</a><br>
-    echo "here defined data enry added <br>"
+    echo " Here defined data enry added <br>"
     <a href="table.php">Table</a><br>
 
     
