@@ -25,7 +25,7 @@ function AddData($connect,$regno,$name,$age,$course){
 			try{
 
                 //Quary
-                $sql = "INSERT INTO students VALUES('$regno','$name',$age,'$course')";
+                $sql = "INSERT INTO student VALUES('$regno','$name',$age,'$course')";
                 //execute the quary
                 $result = mysqli_query($connect,$sql);
 
