@@ -9,7 +9,7 @@
 	<table >
 		<tr >
 			<td align=right>Registration Number: </td>
-			<td><input type="text" name="id"/></td>
+			<td><input type="text" name="regno"/></td>
 		</tr>
 		<tr>
 			<td align=right>NAME: </td>
