@@ -14,18 +14,18 @@
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			//echo "Got the POST request from client";
 			
-				$reg = $_POST['id'];
+				$reg = $_POST['regno'];
 				$name = $_POST['name'];
 				$age = $_POST['age'];
 				$course = $_POST['course'];
 				AddData($connect,$reg,$name,$age,$course);
 	}
 			//echo "Hello";
-function AddData($connect,$reg,$name,$age,$course){
+function AddData($connect,$regno,$name,$age,$course){
 			try{
 
                 //Quary
-                $sql = "INSERT INTO students VALUES('$reg','$name',$age,'$course')";
+                $sql = "INSERT INTO students VALUES('$regno','$name',$age,'$course')";
                 //execute the quary
                 $result = mysqli_query($connect,$sql);
 
