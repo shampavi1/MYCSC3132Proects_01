@@ -9,8 +9,8 @@
 		require_once 'dbconf.php';	
 		try {
 			// Corrected SQL query with explicit column list
-			$sql = "INSERT INTO student (name, age, gender, course, enrollment_date) 
-			        VALUES ('Alice ', 20, 'Female', 'Computer Science', '2023-08-15')";
+			$sql = "INSERT INTO student (regno,name, age, course) 
+			        VALUES ('2020asp26','Alice ', 20, 'CSC')";
 			
 			// Execute the query
 			$result = mysqli_query($connect, $sql);
