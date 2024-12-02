@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>my work</h1><br><br>
+    <h1>my work - 22.11.2024</h1><br><br>
 
     <a href="table01.php">Table 1</a><br>
     <a href="table02.php">Table 2</a><br>
