@@ -8,8 +8,8 @@
 <body>
     <h1>My Works 29.11.2024</h1><br><br>
 
-    <a href="form.php">form</a><br>
     <a href="insert.php">Insert</a><br>
+    <a href="form.php">form</a><br>
     <a href="table.php">Table</a><br>
 
     
