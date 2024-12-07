@@ -31,7 +31,7 @@ function AddData($connect,$regno,$name,$age,$course){
 
                 if ($result){
                     echo "New student record created successfully";
-                    printTable("students",$connect);
+                    printTable("student",$connect);
                 }else{
                     die("Error".mysqli_error($connect));
                 }
