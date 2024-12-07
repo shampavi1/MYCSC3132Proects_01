@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-</head>
+</head> 
 <body>
 	// file name 
 <form action = "insert.php" method = "POST">

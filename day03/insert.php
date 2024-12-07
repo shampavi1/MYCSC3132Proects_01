@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<?php
+<?php 
 
 	require_once 'dbconf.php';	
 	
