@@ -2,7 +2,7 @@
 require_once 'dbconf.php';
 
 try {
-    $sql = "SELECT * FROM student;";
+    $sql = "SELECT * FROM students";
 
     // Execute the query
     $result = mysqli_query($connect, $sql);
