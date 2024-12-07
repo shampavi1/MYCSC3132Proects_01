@@ -13,7 +13,7 @@ try{
         echo "connectection successfully";
     }
 }
-catch (Execption $e){
+catch (Exception $e){
     die($e->getMessage());
 }
 ?>
