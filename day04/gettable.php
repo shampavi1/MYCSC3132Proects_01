@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>EMPLOYEE LIST</title>
+	<title>USER LIST</title>
 </head>
 <body>
 
@@ -13,6 +13,9 @@ require_once 'myfunc.php';
 
 //PrintTable ("employee",$connect);
 user($connect);
+$user_id = $_GET['user_id'];
+
+Empdetails($user_id,$connect);
 
 ?>
 
