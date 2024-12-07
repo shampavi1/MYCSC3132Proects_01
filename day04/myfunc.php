@@ -53,7 +53,7 @@ function user($connect){
 
 
 
- function Empdetails($user_id,$connect){
+ function userdetails($user_id,$connect){
     try{
     
         $sql = "SELECT * FROM  users where  user_id = $user_id ";
