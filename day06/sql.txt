@@ -1,0 +1,85 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS library;
+USE library;
+
+-- Create Users Table
+CREATE TABLE IF NOT EXISTS Users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(15),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+-- Insert Data into Users Table
+INSERT INTO Users (user_id, name, email, phone) VALUES
+    (1,'Alice Johnson', 'alice@example.com', '1234567890'),
+    (2,'Bob Smith', 'bob@example.com', '9876543210'),
+    (3,'Charlie Brown', 'charlie@example.com', '5556667777');
+
+-- Create Books Table
+CREATE TABLE IF NOT EXISTS Books (
+    book_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    genre VARCHAR(50),
+    published_year INT,
+    available_copies INT DEFAULT 0,
+    total_copies INT NOT NULL CHECK (available_copies <= total_copies)
+);
+
+-- Insert Data into Books Table
+INSERT INTO Books (book_id, title, genre, published_year, available_copies, total_copies) VALUES
+    (1,'Harry Potter and the Sorcerer\'s Stone', 'Fantasy', 1997, 3, 3),
+    (2,'1984', 'Dystopian', 1949, 5, 5),
+    (3,'Pride and Prejudice', 'Romance', 1913, 2, 2);
+
+
+
+-- Create Authors Table
+CREATE TABLE IF NOT EXISTS Authors (
+    author_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    birth_year INT,
+    death_year INT
+);
+-- Insert Data into Authors Table
+INSERT INTO Authors (author_id, name, birth_year, death_year) VALUES
+    (1,'J.K. Rowling', 1965, NULL),
+    (2,'George Orwell', 1903, 1950),
+    (3,'Jane Austen', 1995, NULL);
+
+
+-- Create Book_Authors Table (Many-to-Many Relationship)
+CREATE TABLE IF NOT EXISTS Book_Authors (
+    book_id INT,
+    author_id INT,
+    PRIMARY KEY (book_id, author_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id) ON DELETE CASCADE,
+    FOREIGN KEY (author_id) REFERENCES Authors(author_id) ON DELETE CASCADE
+);
+-- Insert Data into Book_Authors Table
+INSERT INTO Book_Authors (book_id, author_id) VALUES
+    (1, 1), -- Harry Potter by J.K. Rowling
+    (2, 2), -- 1984 by George Orwell
+    (3, 3); -- Pride and Prejudice by Jane Austen
+
+
+-- Create Borrow Table (Tracks Borrowing History)
+CREATE TABLE IF NOT EXISTS Borrow (
+    borrow_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    book_id INT,
+    borrow_date DATE NOT NULL,
+    return_date DATE,
+    status ENUM('Borrowed', 'Returned') DEFAULT 'Borrowed',
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (book_id) REFERENCES Books(book_id) ON DELETE CASCADE
+);
+-- Insert Data into Borrow Table
+INSERT INTO Borrow (borrow_id, user_id, book_id, borrow_date, return_date, status) VALUES
+    (1,1, 1, '2024-12-01', NULL, 'Borrowed'),
+    (2,2, 2, '2024-12-05', '2024-12-15', 'Returned'),
+    (3,3, 3, '2024-12-10', NULL, 'Borrowed');
+
+
+
+
